@@ -19,11 +19,11 @@
 <body>
 
   <div class="container d-flex flex-column justify-content-center" ng-controller="apiController">
-    <h1 class="text-center">{{ header }}</h1>
+    <h1 class="text-center mt-100">{{ header }}</h1>
     
-    <div class="row row-cols-4">
+    <div class="row row-cols-5 justify-content-center">
 
-      <div class=" card" style="width: 18rem;" ng-repeat="meal in meals">
+      <div class="m-4 card p-0" style="width: 18rem;" ng-repeat="meal in meals">
       <img src={{meal.strMealThumb}} class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{meal.strMeal}}</h5>
@@ -31,6 +31,7 @@
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
+  </div>
 
 
   </div>
