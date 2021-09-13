@@ -8,9 +8,7 @@ angular.module('apiProject', [])
       console.log($scope.userSearch)
       $http.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${$scope.userSearch}`).then(successCallback, errorCallback);
     }
-
     
-
     function successCallback(response) {
       $scope.meals = response.data.meals;
       console.log('data', $scope.meals);
