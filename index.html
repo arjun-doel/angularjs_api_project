@@ -18,13 +18,26 @@
 
 <body>
 
-  <div class="container" ng-controller="apiController">
-    <h1 class="text-center"">{{ header }}</h1>
+  <div class="container d-flex flex-column justify-content-center" ng-controller="apiController">
+    <h1 class="text-center">{{ header }}</h1>
+    
+    <div class="row row-cols-4">
 
-    <p ng-repeat="meal in meals">{{meal.strMeal}}</p>
+      <div class=" card" style="width: 18rem;" ng-repeat="meal in meals">
+      <img src={{meal.strMealThumb}} class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{meal.strMeal}}</h5>
+        <p class="card-text">{{meal.strArea}}</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
 
   </div>
-  
+
+
+  </div>
+
 
 </body>
 
